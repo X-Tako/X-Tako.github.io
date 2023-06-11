@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #636332;
+  background: #b8ffa2;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1543,14 +1543,7 @@ pre .javascript .function {
   margin-top: 40px;
   text-align: center;
 }
-.use-motion .post-block {
-  opacity: 0;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  padding: 25px;
-  -webkit-box-shadow: 0 0 5px rgba(255,255,255,0.5);
-  -moz-box-shadow: 0 0 5px rgba(255,255,255,0.5);
-}
+.use-motion .post-block,
 .use-motion .pagination,
 .use-motion .comments {
   opacity: 0;
@@ -2164,6 +2157,14 @@ ul.breadcrumb li + li:last-child {
 .tag-cloud a:hover {
   color: var(--link-hover-color) !important;
 }
+.gt-header a,
+.gt-comments a,
+.gt-popup a {
+  border-bottom: none;
+}
+.gt-container .gt-popup .gt-action.is--active::before {
+  top: 0.7em;
+}
 @media (max-width: 767px) {
   .header-inner,
   .main-inner,
@@ -2292,13 +2293,13 @@ embed {
 }
 .sidebar a,
 .sidebar span.exturl {
-  border-bottom-color: #555;
-  color: #999;
+  border-bottom-color: #fff;
+  color: #000;
 }
 .sidebar a:hover,
 .sidebar span.exturl:hover {
-  border-bottom-color: #eee;
-  color: #eee;
+  border-bottom-color: #000;
+  color: #000;
 }
 .links-of-blogroll-item {
   padding: 2px 10px;
@@ -2330,18 +2331,32 @@ body {
 .footer-inner {
   color: #000;
 }
-/* sidebar social icon */
-.Bilibili {
-  background-image: url("/images/BILIBILI_LOGO.svg");
-  background-size: 1em 1em;
-  opacity: 0;
-  background-position: 0.05rem 0.2rem;
-  background-repeat: no-repeat;
-  height: 1rem;
-  width: 1rem;
-  border-radius: 0rem;
-/*鼠标停留在图标上时，图标呈现发光效果*/
+.main-inner > .sub-menu,
+.main-inner > .post-block,
+.main-inner > .tabs-comment,
+.main-inner > .comments,
+.main-inner > .pagination {
+  background: rgba(255,255,255,0);
 }
-.Bilibili:hover {
-  opacity: 0;
+body {
+  color: #000;
+}
+.posts-expand .post-title-link {
+  color: #000;
+}
+.posts-expand .post-meta-container {
+  color: #696969;
+}
+.sidebar {
+  opacity: 0.7;
+}
+.header-inner {
+  background: rgba(255,255,255,0);
+}
+.popup {
+  opacity: 0.5;
+}
+.main-inner {
+  background-color: rgba(255,255,255,0.8);
+  padding: 0px 60px 40px 60px;
 }

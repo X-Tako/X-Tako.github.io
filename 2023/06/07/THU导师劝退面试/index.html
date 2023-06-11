@@ -100,6 +100,7 @@
       <h1 class="site-title">Triplewater Island</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
+      <p class="site-subtitle" itemprop="description">Have fun here!</p>
   </div>
 
   <div class="site-nav-right">
@@ -171,7 +172,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
       <meta itemprop="name" content="Triplewater">
-      <meta itemprop="description" content="Cloud, stream and ice">
+      <meta itemprop="description" content="<font color="#000000"> Cloud, stream and ice">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -312,6 +313,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -367,7 +369,7 @@
     <img class="site-author-image" itemprop="image" alt="Triplewater"
       src="/images/avatar.png">
   <p class="site-author-name" itemprop="name">Triplewater</p>
-  <div class="site-description" itemprop="description">Cloud, stream and ice</div>
+  <div class="site-description" itemprop="description"><font color="#000000"> Cloud, stream and ice</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -393,13 +395,16 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/X-Tako" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;X-Tako" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+        <a href="https://github.com/X-Tako" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;X-Tako" rel="noopener" target="_blank">GitHub</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.zhihu.com/people/han-guli" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;han-guli" rel="noopener" target="_blank"><i class="fab fa-zhihu fa-2xl fa-fw"></i></a>
+        <a href="https://www.zhihu.com/people/han-guli" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;han-guli" rel="noopener" target="_blank">知乎</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://space.bilibili.com/630520146?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;630520146?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i></a>
+        <a href="https://space.bilibili.com/630520146?spm_id_from=333.1007.0.0" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;630520146?spm_id_from&#x3D;333.1007.0.0" rel="noopener" target="_blank">Bilibili</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.douban.com/people/240861434/?_i=6499973CuCXt_1" title="豆瓣 → https:&#x2F;&#x2F;www.douban.com&#x2F;people&#x2F;240861434&#x2F;?_i&#x3D;6499973CuCXt_1" rel="noopener" target="_blank">豆瓣</a>
       </span>
   </div>
 
@@ -534,6 +539,26 @@ $(document).ready(function() {
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '98ceedacf67a52c8ead5',
+      clientSecret: '54577d0440b527b8c6fdf748b2848cc0237b5b79',
+      repo        : 'comments',
+      owner       : 'X-Tako',
+      admin       : ['X-Tako'],
+      id          : '6c5b48ffac0f72ccad3acb29d758bab9',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
